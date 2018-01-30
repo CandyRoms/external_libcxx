@@ -31,7 +31,10 @@ LOCAL_CPPFLAGS := \
     -UNDEBUG \
     -w \
     -Wno-error=non-virtual-dtor \
-    -Wno-reserved-user-defined-literal \
+    -Wno-reserved-user-defined-literal
+
+LOCAL_CFLAGS =+ \
+    -Wno-error=non-virtual-dtor \
 
 # Optimization is causing relocation for nothrow new to be thrown away.
 # http://llvm.org/bugs/show_bug.cgi?id=21421
